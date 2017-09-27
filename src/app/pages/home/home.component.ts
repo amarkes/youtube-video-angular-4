@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
-  title: string;
+  title: Date;
   constructor() { }
 
   ngOnInit() {
-    this.title = 'Esse é o titulo do Header';
+    this.title = new Date();
+  }
+  changeHome(event: Date): void {
+    this.title = event;
   }
 
 }

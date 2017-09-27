@@ -1,1 +1,13 @@
-<h1>{{titulo}}</h1>
+<ng-container>
+    <ng-template 
+    [ngTemplateOutlet]="componentHeader || templateDefaul"
+    [ngOutletContext]="{
+        template: 'template',
+        action: action
+    }">
+
+    </ng-template>
+    <ng-template #templateDefaul>
+        <h1>Esse é um template padrao</h1>
+    </ng-template>
+</ng-container>

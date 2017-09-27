@@ -1,2 +1,7 @@
-<app-header [titulo]="title"></app-header>
+<app-header [titulo]="title" (changeEvent)="changeHome($event)">
+    <ng-template #componentHeader let-template="template" let-action="action">
+        <h6>{{title}}</h6>
+        <button (click)="action.change()">Change</button>
+    </ng-template>
+</app-header>
 <app-footer></app-footer>
