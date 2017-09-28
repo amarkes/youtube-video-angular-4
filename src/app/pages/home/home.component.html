@@ -2,6 +2,8 @@
     <ng-template #componentHeader let-template="template" let-action="action">
         <h6>{{title}}</h6>
         <button (click)="action.change()">Change</button>
+        <button md-raised-button color="primary" (click)="action.change()">Change</button>
+        <md-icon>home</md-icon>
     </ng-template>
 </app-header>
 <app-footer></app-footer>
