@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { HeaderModule } from '../../components/header/header.module';
 import { FooterModule } from '../../components/footer/footer.module';
 import { MdButtonModule, MdIconModule } from '@angular/material';
+import { CepService } from '../../services/cep/cep.service';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { MdButtonModule, MdIconModule } from '@angular/material';
     MdIconModule
   ],
   exports: [ HomeComponent ],
-  declarations: [ HomeComponent ]
+  declarations: [ HomeComponent ],
+  providers: [CepService]
 })
 export class HomeModule { }

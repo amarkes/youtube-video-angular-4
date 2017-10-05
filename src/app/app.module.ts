@@ -5,6 +5,7 @@ import { HomeModule } from './pages/home/home.module';
 import { AppRoutesModule } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CepModule } from './services/cep/cep.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutesModule,
     HomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CepModule
   ],
   providers: [],
   bootstrap: [AppComponent]
