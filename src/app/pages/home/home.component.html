@@ -1,4 +1,4 @@
-<app-header [titulo]="title" (changeEvent)="changeHome($event)">
+<!-- <app-header [titulo]="title" (changeEvent)="changeHome($event)">
     <ng-template #componentHeader let-template="template" let-action="action">
         <h6>{{title}}</h6>
         <button (click)="action.change()">Change</button>
@@ -6,4 +6,45 @@
         <md-icon>home</md-icon>
     </ng-template>
 </app-header>
-<app-footer></app-footer>
+<app-footer></app-footer> -->
+<aside>
+    <section>
+        <form [formGroup]="form">
+            <md-form-field>
+                <input mdInput placeholder="CEP" maxlength=“8” (cepEvent)="autoCompleteCep($event)" appCep formControlName="cep">
+            </md-form-field>
+            <br>
+            <md-form-field>
+                <input mdInput placeholder="logradouro" formControlName="logradouro">
+            </md-form-field>
+            <br>
+            <md-form-field>
+                <input mdInput placeholder="complemento" formControlName="complemento">
+            </md-form-field>
+            <br>
+            <md-form-field>
+                <input mdInput placeholder="bairro" formControlName="bairro">
+            </md-form-field>
+            <br>
+            <md-form-field>
+                <input mdInput placeholder="localidade" formControlName="localidade">
+            </md-form-field>
+            <br>
+            <md-form-field>
+                <input mdInput placeholder="uf" formControlName="uf">
+            </md-form-field>
+            <br>
+            <md-form-field>
+                <input mdInput placeholder="unidade" formControlName="unidade">
+            </md-form-field>
+            <br>
+            <md-form-field>
+                <input mdInput placeholder="ibge" formControlName="ibge">
+            </md-form-field>
+            <br>
+            <md-form-field>
+                <input mdInput placeholder="gia" formControlName="gia">
+            </md-form-field>
+        </form>
+    </section>
+</aside>

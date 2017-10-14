@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { HeaderModule } from '../../components/header/header.module';
 import { FooterModule } from '../../components/footer/footer.module';
-import { MdButtonModule, MdIconModule } from '@angular/material';
+import { MdButtonModule, MdIconModule, MdInputModule } from '@angular/material';
 import { CepService } from '../../services/cep/cep.service';
+import { CepModule } from '../../directives/cep/cep.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -12,7 +14,10 @@ import { CepService } from '../../services/cep/cep.service';
     HeaderModule,
     FooterModule,
     MdButtonModule,
-    MdIconModule
+    MdIconModule,
+    MdInputModule,
+    CepModule,
+    ReactiveFormsModule
   ],
   exports: [ HomeComponent ],
   declarations: [ HomeComponent ],
