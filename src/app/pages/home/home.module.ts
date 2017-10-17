@@ -7,6 +7,7 @@ import { MdButtonModule, MdIconModule, MdInputModule } from '@angular/material';
 import { CepService } from '../../services/cep/cep.service';
 import { CepModule } from '../../directives/cep/cep.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DateModule } from '../../pipes/date/date.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MdIconModule,
     MdInputModule,
     CepModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DateModule
   ],
   exports: [ HomeComponent ],
   declarations: [ HomeComponent ],
